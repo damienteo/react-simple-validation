@@ -2,7 +2,7 @@ import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-import Form from "./form/form";
+import InputForm from "./form/inputForm";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h2>React Form Validation Demo</h2>
-        <Form />
+        <InputForm />
       </header>
     </div>
   );
