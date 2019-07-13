@@ -1,10 +1,17 @@
 import React, { Component } from "react";
+
+import { FormErrors } from "./formErrors";
+
 // import "./form.css";
 
 class Form extends Component {
   state = {
     email: "",
-    password: ""
+    password: "",
+    formErrors: { email: "", password: "" },
+    emailValid: false,
+    passwordValid: false,
+    formValid: false
   };
 
   handleUserInput = event => {
@@ -36,6 +43,9 @@ class Form extends Component {
             value={name}
             onChange={event => this.handleUserInput(event)}
           />
+        </div>
+        <div className="panel panel-default">
+          <FormErrors formErrors={this.state.formErrors} />
         </div>
         <button type="submit" className="btn btn-primary">
           Sign up
